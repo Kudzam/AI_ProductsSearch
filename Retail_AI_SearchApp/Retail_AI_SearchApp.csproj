@@ -5,6 +5,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <UserSecretsId>e543db44-64b0-412e-ada5-02c1bc9c669b</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +14,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="10.0.2" />
     <PackageReference Include="Microsoft.Extensions.VectorData.Abstractions" Version="9.7.0" />
     <PackageReference Include="Microsoft.SemanticKernel.Connectors.InMemory" Version="1.70.0-preview" />
+    <PackageReference Include="System.Linq.AsyncEnumerable" Version="10.0.2" />
   </ItemGroup>
 
 </Project>
