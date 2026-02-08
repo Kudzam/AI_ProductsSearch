@@ -83,8 +83,17 @@ new(){
 
 // Load the configuration values.
 IConfigurationRoot config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
-string model = config["ModelName"];
-string key = config["OpenAIKey"];
+string? model = config["ModelName"];
+string? key = config["OpenAIKey"];
+
+if (string.IsNullOrWhiteSpace(model))
+{
+    throw new InvalidOperationException("ModelName configuration value is missing.");
+}
+if (string.IsNullOrWhiteSpace(key))
+{
+    throw new InvalidOperationException("OpenAIKey configuration value is missing.");
+}
 
 // Create the embedding generator.
 IEmbeddingGenerator<string, Embedding<float>> generator =
